@@ -1,4 +1,5 @@
 {
+  "version": "1.5.0",
   "name": "hubot-test-helper",
   "description": "Helper for testing hubot script",
   "main": "./lib/index.js",
