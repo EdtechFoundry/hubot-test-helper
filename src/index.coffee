@@ -36,7 +36,11 @@ class Room extends Hubot.Adapter
   receive: (userName, message) ->
     new Promise (resolve) =>
       @messages.push [userName, message]
-      user = new Hubot.User(userName, { room: @name })
+      user = @robot.brain.userForName userName
+      if !user
+        user = new Hubot.User(userName, { room: @name })
+      else
+        user.room = @name
       @robot.receive(new Hubot.TextMessage(user, message), resolve)
 
   destroy: ->
