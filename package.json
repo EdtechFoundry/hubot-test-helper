@@ -14,7 +14,7 @@
     "hubot"
   ],
   "dependencies": {
-    "hubot": ">= 2.6.0 < 3"
+    "hubot": ">=8.1.0"
   },
   "devDependencies": {
     "chai": "latest",
